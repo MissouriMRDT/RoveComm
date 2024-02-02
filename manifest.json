@@ -178,7 +178,7 @@
                     "dataId": 3002,
                     "dataType": "UINT8_T",
                     "dataCount": 1,
-                    "comments": "[0-Turn off Watchdog Override, 1-Turn on Watchdog Override]"
+                    "comments": "[0-override off, 1-override on]"
                 },
                 "LeftDriveGimbalIncrement": {
                     "dataId": 3003,
@@ -354,7 +354,7 @@
                 }
             },
             "Error": {
-                "WatchDogStatus": {
+                "WatchdogStatus": {
                     "dataId": 7200,
                     "dataType": "UINT8_T",
                     "dataCount": 1,
@@ -471,11 +471,11 @@
                 }
             },
             "Error": {
-                "WatchDogStatus": {
+                "WatchdogStatus": {
                     "dataId": 8200,
                     "dataType": "UINT8_T",
                     "dataCount": 1,
-                    "comments": "[WatchDogStatus] (0-Not Triggered, 1-Triggered) "
+                    "comments": "(1-Watchdog timeout, 0-OK)"
                 }
             }
         },
@@ -536,11 +536,17 @@
                     "dataCount": 1,
                     "comments": "[0-180] (degrees)"
                 },
-                "WaterPump": {
+                "Proboscis": {
                     "dataId": 9009,
+                    "dataType": "INT16_T",
+                    "dataCount": 1,
+                    "comments": "Motor decipercent [-1000, 1000]"
+                },
+                "WatchdogOverride": {
+                    "dataId": 9010,
                     "dataType": "UINT8_T",
                     "dataCount": 1,
-                    "comments": "Water pump (0-Off, 1-On)"
+                    "comments": "[0-override off, 1-override on]"
                 }
             },
             "Telemetry": {
@@ -555,9 +561,22 @@
                     "dataType": "UINT8_T",
                     "dataCount": 1,
                     "comments": "[ScoopAxis+, ScoopAxis-, SensorAxis+, SensorAxis-] (0-off, 1-on) (bitmasked)"
+                },
+                "EnvironmentalData": {
+                    "dataId": 9102,
+                    "dataType": "FLOAT_T",
+                    "dataCount": 2,
+                    "comments": "[Temperature, Humidity] (degrees C, relative humidity %)"
                 }
             },
-            "Error": {}
+            "Error": {
+                "WatchdogStatus": {
+                    "dataId": 9200,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "(1-Watchdog timeout, 0-OK)"
+                }
+            }
         },
         "Autonomy": {
             "Ip": "192.168.3.100",
