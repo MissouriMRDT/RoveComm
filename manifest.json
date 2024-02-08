@@ -782,10 +782,10 @@
     },
     "NetworkDevices": {
         "BasestationSwitch": {
-            "Ip": "192.168.126.1"
+            "Ip": "192.168.254.2"
         },
         "RoverSwitch": {
-            "Ip": "192.168.126.2"
+            "Ip": "192.168.254.1"
         },
         "Rover900MHzRocket": {
             "Ip": "192.168.126.11"
