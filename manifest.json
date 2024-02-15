@@ -541,14 +541,20 @@
                     "dataType": "UINT8_T",
                     "dataCount": 1,
                     "comments": "[0-override off, 1-override on]"
+                },
+                "CalibrateEncoder": {
+                    "dataId": 9011,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "[ScoopAxis, SensorAxis, Proboscis] (1-calibrate, 0-no action) (bitmasked)"
                 }
             },
             "Telemetry": {
                 "Positions": {
                     "dataId": 9100,
                     "dataType": "FLOAT_T",
-                    "dataCount": 2,
-                    "comments": "[ScoopAxis, SensorAxis] (in)"
+                    "dataCount": 3,
+                    "comments": "[ScoopAxis, SensorAxis, Proboscis] (in)"
                 },
                 "LimitSwitchTriggered": {
                     "dataId": 9101,
