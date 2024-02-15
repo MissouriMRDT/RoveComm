@@ -386,20 +386,20 @@
                 "SetIK": {
                     "dataId": 8003,
                     "dataType": "FLOAT_T",
-                    "dataCount": 6,
-                    "comments": "[X, Y, Z, Y, P, R] (in, in, in, deg, deg, deg)"
+                    "dataCount": 5,
+                    "comments": "[X, Y, Z, P, R] (in, in, in, deg, deg)"
                 },
                 "IncrementIK_RoverRelative": {
                     "dataId": 8004,
                     "dataType": "FLOAT_T",
-                    "dataCount": 6,
-                    "comments": "[X, Y, Z, Y, P, R] (in, in, in, deg, deg, deg)"
+                    "dataCount": 5,
+                    "comments": "[X, Y, Z, P, R] (in, in, in, deg, deg)"
                 },
                 "IncrementIK_WristRelative": {
                     "dataId": 8005,
                     "dataType": "FLOAT_T",
-                    "dataCount": 6,
-                    "comments": "[X, Y, Z, Y, P, R] (in, in, in, deg, deg, deg)"
+                    "dataCount": 5,
+                    "comments": "[X, Y, Z, P, R] (in, in, in, deg, deg)"
                 },
                 "Laser": {
                     "dataId": 8006,
@@ -416,8 +416,8 @@
                 "Gripper": {
                     "dataId": 8008,
                     "dataType": "INT16_T",
-                    "dataCount": 2,
-                    "comments": "[Gripper1, Gripper2] Motor decipercent [-1000, 1000]"
+                    "dataCount": 1,
+                    "comments": "Controls the motor chosen by SelectGripper, Motor decipercent [-1000, 1000]"
                 },
                 "WatchdogOverride": {
                     "dataId": 8009,
@@ -431,37 +431,31 @@
                     "dataCount": 1,
                     "comments": "[X+, X-, Y1+, Y1-, Y2+, Y2-, Z+, Z-] (0-override off, 1-override on) (bitmasked)"
                 },
-                "RequestPositions": {
+                "CalibrateEncoder": {
                     "dataId": 8011,
                     "dataType": "UINT8_T",
                     "dataCount": 1,
-                    "comments": "Prompt arm for position data"
+                    "comments": "[X, Y1, Y2, Z, Pitch, Roll1, Roll2] (1-calibrate, 0-no action) (bitmasked)"
                 },
-                "RequestCoordinates": {
+                "SelectGripper": {
                     "dataId": 8012,
                     "dataType": "UINT8_T",
                     "dataCount": 1,
-                    "comments": "Prompt arm for XYZPYR data"
-                },
-                "ToggleTelemetry": {
-                    "dataId": 8013,
-                    "dataType": "UINT8_T",
-                    "dataCount": 1,
-                    "comments": "[Positions, Coordinates] (bitmasked) [1-Enable, 0-Disable]"
+                    "comments": "0-Gripper1, 1-Gripper2"
                 }
             },
             "Telemetry": {
                 "Positions": {
                     "dataId": 8100,
                     "dataType": "FLOAT_T",
-                    "dataCount": 6,
-                    "comments": "[X, Y, Z, Pitch, Roll1, Roll2] (in, in, in, deg, deg, deg)"
+                    "dataCount": 7,
+                    "comments": "[X, Y1, Y2, Z, Pitch, Roll1, Roll2] (in, in, in, in, deg, deg, deg)"
                 },
                 "Coordinates": {
                     "dataId": 8101,
                     "dataType": "FLOAT_T",
-                    "dataCount": 6,
-                    "comments": "[X, Y, Z, Y, P, R] (in, in, in, deg, deg, deg)"
+                    "dataCount": 5,
+                    "comments": "[X, Y, Z, P, R] (in, in, in, deg, deg, deg)"
                 },
                 "LimitSwitchTriggered": {
                     "dataId": 8102,
