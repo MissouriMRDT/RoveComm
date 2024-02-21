@@ -442,6 +442,12 @@
                     "dataType": "UINT8_T",
                     "dataCount": 1,
                     "comments": "0-Gripper1, 1-Gripper2"
+                },
+                "CameraTilt": {
+                    "dataId": 8013,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "Degrees [0, 180]"
                 }
             },
             "Telemetry": {
@@ -455,7 +461,7 @@
                     "dataId": 8101,
                     "dataType": "FLOAT_T",
                     "dataCount": 5,
-                    "comments": "[X, Y, Z, P, R] (in, in, in, deg, deg, deg)"
+                    "comments": "[X, Y, Z, P, R] (in, in, in, deg, deg)"
                 },
                 "LimitSwitchTriggered": {
                     "dataId": 8102,
