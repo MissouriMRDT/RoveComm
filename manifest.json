@@ -304,8 +304,11 @@
         }
       }
     },
+    "BaseStationNav": {
+      "Ip": "192.168.100.112"
+    },
     "SignalStack": {
-      "Ip": "192.168.3.101",
+      "Ip": "192.168.100.101",
       "Commands": {
         "OpenLoop": {
           "dataId": 7000,
@@ -781,22 +784,22 @@
       "Ip": "192.168.254.1"
     },
     "Rover900MHzRocket": {
-      "Ip": "192.168.126.11"
+      "Ip": "10.0.0.3"
     },
     "Basestation900MHzRocket": {
-      "Ip": "192.168.126.10"
+      "Ip": "10.0.0.4"
     },
     "Rover5GHzRocket": {
-      "Ip": "192.168.126.31"
+      "Ip": "10.0.0.19"
     },
     "Basestation5GHzRocket": {
-      "Ip": "192.168.126.30"
+      "Ip": "10.0.0.20"
     },
     "Rover2_4GHzRocket": {
-      "Ip": "192.168.126.21"
+      "Ip": "10.0.0.10"
     },
     "Basestation2_4GHzRocket": {
-      "Ip": "192.168.126.20"
+      "Ip": "10.0.0.12"
     }
   }
 }
