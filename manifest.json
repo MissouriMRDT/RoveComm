@@ -628,9 +628,9 @@
                 },
                 "SetMaxSpeed": {
                     "dataId": 11006,
-                    "dataType": "UINT16_T",
+                    "dataType": "FLOAT_T",
                     "dataCount": 1,
-                    "comments": ""
+                    "comments": "A mutliplier from 0.0 to 1.0 that will scale the max power effort of Autonomy"
                 }
             },
             "Telemetry": {
