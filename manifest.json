@@ -631,6 +631,12 @@
                     "dataType": "FLOAT_T",
                     "dataCount": 1,
                     "comments": "A mutliplier from 0.0 to 1.0 that will scale the max power effort of Autonomy"
+                },
+                "SetLoggingLevels": {
+                    "dataId": 11007,
+                    "dataType": "UINT8_T",
+                    "dataCount": 3,
+                    "comments": "[Enum (AUTONOMYLOG), Enum (AUTONOMYLOG), Enum (AUTONOMYLOG)] {Console, File, RoveComm}"
                 }
             },
             "Telemetry": {
@@ -666,6 +672,16 @@
                     "Avoidance": 7,
                     "Reversing": 8,
                     "Stuck": 9
+                },
+                "AUTONOMYLOG": {
+                    "TraceL3": 1,
+                    "TraceL2": 2,
+                    "TraceL1": 3,
+                    "Debug": 4,
+                    "Info": 5,
+                    "Warning": 6,
+                    "Error": 7,
+                    "Critical": 8
                 }
             }
         },
