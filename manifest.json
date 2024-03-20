@@ -758,7 +758,7 @@
             },
             "Error": {}
         },
-        "Fluorometer": {
+        "ReflectanceSpectrometer": {
             "Ip": "192.168.3.103",
             "Commands": {
                 "EnableLEDs": {
