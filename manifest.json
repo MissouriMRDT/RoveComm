@@ -533,12 +533,6 @@
                     "dataCount": 1,
                     "comments": "[0-180] (degrees)"
                 },
-                "Proboscis": {
-                    "dataId": 9009,
-                    "dataType": "INT16_T",
-                    "dataCount": 1,
-                    "comments": "Motor decipercent [-1000, 1000]"
-                },
                 "WatchdogOverride": {
                     "dataId": 9010,
                     "dataType": "UINT8_T",
@@ -556,8 +550,8 @@
                 "Positions": {
                     "dataId": 9100,
                     "dataType": "FLOAT_T",
-                    "dataCount": 3,
-                    "comments": "[ScoopAxis, SensorAxis, Proboscis] (in)"
+                    "dataCount": 2,
+                    "comments": "[ScoopAxis, SensorAxis] (in)"
                 },
                 "LimitSwitchTriggered": {
                     "dataId": 9101,
@@ -570,6 +564,12 @@
                     "dataType": "FLOAT_T",
                     "dataCount": 2,
                     "comments": "[Temperature, Humidity] (degrees C, relative humidity %)"
+                },
+                "AugerSpeed": {
+                    "dataId": 9103,
+                    "dataType": "FLOAT_T",
+                    "dataCount": 1,
+                    "comments": "(in/s)"
                 }
             },
             "Error": {
@@ -578,6 +578,12 @@
                     "dataType": "UINT8_T",
                     "dataCount": 1,
                     "comments": "(1-Watchdog timeout, 0-OK)"
+                },
+                "AugerStalled": {
+                    "dataId": 9201,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "(1-Stalled, 0-OK)"
                 }
             }
         },
@@ -798,6 +804,62 @@
             "Ip": "192.168.3.104",
             "Commands": {},
             "Telemetry": {},
+            "Error": {}
+        },
+        "Instruments": {
+            "Ip": "192.168.3.105",
+            "Commands": {
+                "EnableLEDs": {
+                    "dataId": 16000,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "[Green, White] [1-Enabled, 0-Disabled] (bitmasked)"
+                },
+                "RequestReading": {
+                    "dataId": 16001,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "0-Raman, 1-Reflectance"
+                }
+            },
+            "Telemetry": {
+                "RamanReading_Part1": {
+                    "dataId": 16100,
+                    "dataType": "UINT16_T",
+                    "dataCount": 500,
+                    "comments": "Raman CCD elements 1-500"
+                },
+                "RamanReading_Part2": {
+                    "dataId": 16101,
+                    "dataType": "UINT16_T",
+                    "dataCount": 500,
+                    "comments": "Raman CCD elements 501-1000"
+                },
+                "RamanReading_Part3": {
+                    "dataId": 16102,
+                    "dataType": "UINT16_T",
+                    "dataCount": 500,
+                    "comments": "Raman CCD elements 1001-1500"
+                },
+                "RamanReading_Part4": {
+                    "dataId": 16103,
+                    "dataType": "UINT16_T",
+                    "dataCount": 500,
+                    "comments": "Raman CCD elements 1501-2000"
+                },
+                "RamanReading_Part5": {
+                    "dataId": 16104,
+                    "dataType": "UINT16_T",
+                    "dataCount": 48,
+                    "comments": "Raman CCD elements 2001-2048"
+                },
+                "ReflectanceReading": {
+                    "dataId": 16105,
+                    "dataType": "UINT8_T",
+                    "dataCount": 288,
+                    "comments": "Reflectance CCD elements 1-288"
+                }
+            },
             "Error": {}
         }
     },
