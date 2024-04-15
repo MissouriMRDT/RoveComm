@@ -304,8 +304,8 @@
                 "AccuracyData": {
                     "dataId": 6105,
                     "dataType": "FLOAT_T",
-                    "dataCount": 3,
-                    "comments": "[horizontal_accur, vertical_accur, heading_accur] Accuracy in meters/degrees"
+                    "dataCount": 5,
+                    "comments": "[horizontal_accur, vertical_accur, heading_accur, fix_type, is_differentia] [meters, meters, degrees, ublox_navpvt fix type (http://docs.ros.org/en/noetic/api/ublox_msgs/html/msg/NavPVT.html), boolean]"
                 }
             },
             "Error": {
