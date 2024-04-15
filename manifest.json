@@ -267,6 +267,105 @@
                 }
             }
         },
+        "PMS": {
+            "Ip": "192.168.2.102",
+            "Commands": {
+                "EStop": {
+                    "dataId": 4000,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "Power off all systems except network (PMS will stay on)"
+                },
+                "Suicide": {
+                    "dataId": 4001,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "Power off all systems including network, cannot recover without physical reboot (PMS will stay on)"
+                },
+                "Reboot": {
+                    "dataId": 4002,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "Cycle all systems including network off and back on (PMS will stay on)"
+                },
+                "EnableBus": {
+                    "dataId": 4003,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "[Motor, Core, Aux] (bitmasked) [1-Enable, 0-No change]"
+                },
+                "DisableBus": {
+                    "dataId": 4004,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "[Motor, Core, Aux] (bitmasked) [1-Disable, 0-No change]"
+                },
+                "SetBus": {
+                    "dataId": 4005,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "[Motor, Core, Aux] (bitmasked) [1-Enable, 0-Disable]"
+                }
+            },
+            "Telemetry": {
+                "PackCurrent": {
+                    "dataId": 4100,
+                    "dataType": "FLOAT_T",
+                    "dataCount": 1,
+                    "comments": "Total current draw from battery"
+                },
+                "PackVoltage": {
+                    "dataId": 4101,
+                    "dataType": "FLOAT_T",
+                    "dataCount": 1,
+                    "comments": "Pack voltage"
+                },
+                "CellVoltage": {
+                    "dataId": 4102,
+                    "dataType": "FLOAT_T",
+                    "dataCount": 6,
+                    "comments": "C1, C2, C3, C4, C5, C6"
+                },
+                "AuxCurrent": {
+                    "dataId": 4103,
+                    "dataType": "FLOAT_T",
+                    "dataCount": 1,
+                    "comments": "Current draw by aux systems (before 12V buck)"
+                },
+                "MiscCurrent": {
+                    "dataId": 4104,
+                    "dataType": "FLOAT_T",
+                    "dataCount": 3,
+                    "comments": "Current draw from other devices (CS1, CS2, CS3)"
+                }
+            },
+            "Error": {
+                "PackOvercurrent": {
+                    "dataId": 4200,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "Higher current draw than the battery can support. Rover will Reboot automatically"
+                },
+                "CellUndervoltage": {
+                    "dataId": 4201,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "(bitmasked) [1-Undervolt, 0-OK]. Rover will EStop automatically"
+                },
+                "CellCritical": {
+                    "dataId": 4202,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "(bitmasked) [1-Critical, 0-OK]. Rover will Suicide automatically"
+                },
+                "AuxOvercurrent": {
+                    "dataId": 4203,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "Aux system current draw too high. Rover will disable Aux bus automatically"
+                }
+            }
+        },
         "Nav": {
             "Ip": "192.168.2.104",
             "Commands": {},
