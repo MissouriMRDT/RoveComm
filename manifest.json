@@ -371,20 +371,20 @@
                 "OpenLoop": {
                     "dataId": 8000,
                     "dataType": "INT16_T",
-                    "dataCount": 7,
-                    "comments": "[X, Y1, Y2, Z, Pitch, Roll1, Roll2] Motor decipercent (-1000, 1000)"
+                    "dataCount": 6,
+                    "comments": "[X, Y1, Y2, Z, P, R] Motor decipercent [-1000, 1000]"
                 },
                 "SetPosition": {
                     "dataId": 8001,
                     "dataType": "FLOAT_T",
-                    "dataCount": 6,
-                    "comments": "[X, Y, Z, Pitch, Roll1, Roll2] (in, in, in, deg, deg, deg)"
+                    "dataCount": 5,
+                    "comments": "[X, Y, Z, P, R] (in, in, in, deg, deg, deg)"
                 },
                 "IncrementPosition": {
                     "dataId": 8002,
                     "dataType": "FLOAT_T",
-                    "dataCount": 6,
-                    "comments": "[X, Y, Z, Pitch, Roll1, Roll2] (in, in, in, deg, deg, deg)"
+                    "dataCount": 5,
+                    "comments": "[X, Y, Z, P, R] (in, in, in, deg, deg, deg)"
                 },
                 "SetIK": {
                     "dataId": 8003,
@@ -420,7 +420,7 @@
                     "dataId": 8008,
                     "dataType": "INT16_T",
                     "dataCount": 1,
-                    "comments": "Controls the motor chosen by SelectGripper, Motor decipercent [-1000, 1000]"
+                    "comments": "Motor decipercent [-1000, 1000]"
                 },
                 "WatchdogOverride": {
                     "dataId": 8009,
@@ -430,27 +430,21 @@
                 },
                 "LimitSwitchOverride": {
                     "dataId": 8010,
-                    "dataType": "UINT8_T",
+                    "dataType": "UINT16_T",
                     "dataCount": 1,
-                    "comments": "[X+, X-, Y1+, Y1-, Y2+, Y2-, Z+, Z-] (0-override off, 1-override on) (bitmasked)"
+                    "comments": "[X+, X-, Y1+, Y1-, Y2+, Y2-, Z+, Z-, P+, P-] (0-override off, 1-override on) (bitmasked)"
                 },
                 "CalibrateEncoder": {
                     "dataId": 8011,
                     "dataType": "UINT8_T",
                     "dataCount": 1,
-                    "comments": "[X, Y1, Y2, Z, Pitch, Roll1, Roll2] (1-calibrate, 0-no action) (bitmasked)"
+                    "comments": "[X, Y1, Y2, Z, P, R1, R2] (1-calibrate, 0-no action) (bitmasked)"
                 },
                 "SelectGripper": {
                     "dataId": 8012,
                     "dataType": "UINT8_T",
                     "dataCount": 1,
-                    "comments": "0-Gripper1, 1-Gripper2"
-                },
-                "CameraTilt": {
-                    "dataId": 8013,
-                    "dataType": "UINT8_T",
-                    "dataCount": 1,
-                    "comments": "Degrees [0, 180]"
+                    "comments": "Toggle gripper and roll motors controlled by other packets; 0-Gripper1, 1-Gripper2"
                 }
             },
             "Telemetry": {
@@ -468,9 +462,9 @@
                 },
                 "LimitSwitchTriggered": {
                     "dataId": 8102,
-                    "dataType": "UINT8_T",
+                    "dataType": "UINT16_T",
                     "dataCount": 1,
-                    "comments": "[X+, X-, Y1+, Y1-, Y2+, Y2-, Z+, Z-] (0-off, 1-on) (bitmasked)"
+                    "comments": "[X+, X-, Y1+, Y1-, Y2+, Y2-, Z+, Z-, Pitch+, Pitch-] (0-off, 1-on) (bitmasked)"
                 }
             },
             "Error": {
