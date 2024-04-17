@@ -337,6 +337,12 @@
                     "dataType": "FLOAT_T",
                     "dataCount": 3,
                     "comments": "Current draw from other devices (CS1, CS2, CS3)"
+                },
+                "BusStatus": {
+                    "dataId": 4105,
+                    "dataType": "UINT8_T",
+                    "dataCount": 1,
+                    "comments": "[Motor, Core, Aux, Network] (bitmasked) [1-Enabled, 0-Disabled]"
                 }
             },
             "Error": {
