@@ -840,9 +840,9 @@
                 },
                 "RequestReading": {
                     "dataId": 13001,
-                    "dataType": "UINT8_T",
+                    "dataType": "UINT32_T",
                     "dataCount": 1,
-                    "comments": "Start a reading of the CCD"
+                    "comments": "Start a reading of the CCD, with the provided integration time (milliseconds)"
                 }
             },
             "Telemetry": {
@@ -890,9 +890,9 @@
                 },
                 "RequestReading": {
                     "dataId": 14001,
-                    "dataType": "UINT8_T",
+                    "dataType": "UINT32_T",
                     "dataCount": 1,
-                    "comments": "Start a reading of the CCD"
+                    "comments": "Start a reading of the CCD, with the provided integration time (milliseconds)"
                 }
             },
             "Telemetry": {
@@ -920,11 +920,17 @@
                     "dataCount": 1,
                     "comments": "[Green, White] [1-Enabled, 0-Disabled] (bitmasked)"
                 },
-                "RequestReading": {
+                "RequestRamanReading": {
                     "dataId": 16001,
-                    "dataType": "UINT8_T",
+                    "dataType": "UINT32_T",
                     "dataCount": 1,
-                    "comments": "0-Raman, 1-Reflectance"
+                    "comments": "Start a Raman reading, with the provided integration time (milliseconds)"
+                },
+                "RequestReflectanceReading": {
+                    "dataId": 16002,
+                    "dataType": "UINT32_T",
+                    "dataCount": 1,
+                    "comments": "Start a Reflectance reading, with the provided integration time (milliseconds)"
                 }
             },
             "Telemetry": {
