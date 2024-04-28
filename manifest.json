@@ -106,12 +106,6 @@
           "dataType": "UINT8_T",
           "dataCount": 1,
           "comments": "0: Teleop, 1: Autonomy"
-        },
-        "IMUData": {
-          "dataId": 3013,
-          "dataType": "FLOAT_T",
-          "dataCount": 2,
-          "comments": "[Roll, Pitch] (degrees - from horizontal)"
         }
       },
       "Telemetry": {
@@ -120,6 +114,18 @@
           "dataType": "FLOAT_T",
           "dataCount": 6,
           "comments": "[LF, LM, LR, RF, RM, RR] (-1, 1)-> (-100%, 100%)"
+        },
+        "IMUData": {
+          "dataId": 3101,
+          "dataType": "FLOAT_T",
+          "dataCount": 3,
+          "comments": "[Roll, Pitch, Yaw] degrees"
+        },
+        "AccelerometerData": {
+            "dataId": 3102,
+            "dataType": "FLOAT_T",
+            "dataCount": 3,
+            "comments": "[xAxis, yAxis, zAxis] Accel in m/s^2"
         }
       },
       "Error": {},
