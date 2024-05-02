@@ -630,7 +630,7 @@
           "dataCount": 1,
           "comments": "Enum (AUTONOMYSTATE)"
         },
-        "ReachedMarker": {
+        "ReachedGoal": {
           "dataId": 11101,
           "dataType": "UINT8_T",
           "dataCount": 1,
