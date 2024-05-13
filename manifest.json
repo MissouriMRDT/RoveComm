@@ -122,10 +122,10 @@
           "comments": "[Roll, Pitch, Yaw] degrees"
         },
         "AccelerometerData": {
-            "dataId": 3102,
-            "dataType": "FLOAT_T",
-            "dataCount": 3,
-            "comments": "[xAxis, yAxis, zAxis] Accel in m/s^2"
+          "dataId": 3102,
+          "dataType": "FLOAT_T",
+          "dataCount": 3,
+          "comments": "[xAxis, yAxis, zAxis] Accel in m/s^2"
         }
       },
       "Error": {},
@@ -677,6 +677,12 @@
           "dataType": "UINT8_T",
           "dataCount": 2,
           "comments": "Change which camera a feed is looking at. [0] is the feed, [1] is the camera to view."
+        },
+        "TakePicture": {
+          "dataId": 12001,
+          "dataType": "UINT8_T",
+          "dataCount": 1,
+          "comments": "Take a picture with the current camera. [0] is the camera to take a picture with."
         }
       },
       "Telemetry": {
@@ -704,7 +710,14 @@
     },
     "Camera2": {
       "Ip": "192.168.4.101",
-      "Commands": {},
+      "Commands": {
+        "TakePicture": {
+          "dataId": 13001,
+          "dataType": "UINT8_T",
+          "dataCount": 1,
+          "comments": "Take a picture with the current camera. [0] is the camera to take a picture with."
+        }
+      },
       "Telemetry": {},
       "Error": {}
     },
