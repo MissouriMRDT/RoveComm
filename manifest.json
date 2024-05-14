@@ -543,12 +543,6 @@
           "dataCount": 1,
           "comments": "[ScoopAxis+, ScoopAxis-, SensorAxis+, SensorAxis-] (0-off, 1-on) (bitmasked)"
         },
-        "EnvironmentalData": {
-          "dataId": 9102,
-          "dataType": "FLOAT_T",
-          "dataCount": 2,
-          "comments": "[Temperature, Humidity] (degrees C, relative humidity %)"
-        },
         "AugerSpeed": {
           "dataId": 9103,
           "dataType": "FLOAT_T",
@@ -785,6 +779,12 @@
           "dataType": "UINT8_T",
           "dataCount": 288,
           "comments": "Reflectance CCD elements 1-288"
+        },
+        "EnvironmentalData": {
+          "dataId": 9102,
+          "dataType": "FLOAT_T",
+          "dataCount": 2,
+          "comments": "[Temperature, Humidity] (degrees C, relative humidity %)"
         }
       },
       "Error": {}
