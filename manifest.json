@@ -699,7 +699,7 @@
           "comments": "Which cameras the system is currently streaming on each port"
         },
         "PictureTaken1": {
-          "dataId": 12101,
+          "dataId": 12102,
           "dataType": "UINT8_T",
           "dataCount": 1,
           "comments": "Picture has been taken."
