@@ -697,6 +697,12 @@
           "dataType": "UINT8_T",
           "dataCount": 4,
           "comments": "Which cameras the system is currently streaming on each port"
+        },
+        "PictureTaken1": {
+          "dataId": 12101,
+          "dataType": "UINT8_T",
+          "dataCount": 1,
+          "comments": "Picture has been taken."
         }
       },
       "Error": {
@@ -718,7 +724,14 @@
           "comments": "Take a picture with the current camera. [0] is the camera to take a picture with."
         }
       },
-      "Telemetry": {},
+      "Telemetry": {
+        "PictureTaken2": {
+          "dataId": 13100,
+          "dataType": "UINT8_T",
+          "dataCount": 1,
+          "comments": "Picture has been taken."
+        }
+      },
       "Error": {}
     },
     "IRSpectrometer": {
