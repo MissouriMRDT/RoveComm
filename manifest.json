@@ -681,8 +681,8 @@
         "TakePicture": {
           "dataId": 12001,
           "dataType": "UINT8_T",
-          "dataCount": 1,
-          "comments": "Take a picture with the current camera. [0] is the camera to take a picture with."
+          "dataCount": 2,
+          "comments": "Take a picture with the current camera. [0] is the camera to take a picture with. [1] tells the camera whether to restart the stream afterwards."
         }
       },
       "Telemetry": {
@@ -721,7 +721,7 @@
           "dataId": 13001,
           "dataType": "UINT8_T",
           "dataCount": 1,
-          "comments": "Take a picture with the current camera. [0] is the camera to take a picture with."
+          "comments": "Take a picture with the current camera. [0] is the camera to take a picture with. [1] tells the camera whether to restart the stream afterwards."
         }
       },
       "Telemetry": {
