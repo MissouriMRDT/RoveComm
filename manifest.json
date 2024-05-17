@@ -106,6 +106,12 @@
           "dataType": "UINT8_T",
           "dataCount": 1,
           "comments": "0: Teleop, 1: Autonomy"
+        },
+        "LEDText": {
+            "dataId": 3013,
+            "dataType": "CHAR",
+            "dataCount": 256,
+            "comments": "Set the message to display on the lighting panel; null terminator ends string early"
         }
       },
       "Telemetry": {
