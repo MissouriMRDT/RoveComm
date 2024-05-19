@@ -367,8 +367,8 @@
         "SetPosition": {
           "dataId": 8001,
           "dataType": "FLOAT_T",
-          "dataCount": 5,
-          "comments": "[X, Y, Z, P, R] (in, in, in, deg, deg, deg)"
+          "dataCount": 6,
+          "comments": "[X, Y1, Y2, Z, P, R] (in, in, in, in, deg, deg)"
         },
         "IncrementPosition": {
           "dataId": 8002,
