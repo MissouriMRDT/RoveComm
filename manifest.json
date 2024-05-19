@@ -108,10 +108,10 @@
           "comments": "0: Teleop, 1: Autonomy"
         },
         "LEDText": {
-            "dataId": 3013,
-            "dataType": "CHAR",
-            "dataCount": 256,
-            "comments": "Set the message to display on the lighting panel; null terminator ends string early"
+          "dataId": 3013,
+          "dataType": "CHAR",
+          "dataCount": 256,
+          "comments": "Set the message to display on the lighting panel; null terminator ends string early"
         }
       },
       "Telemetry": {
@@ -534,6 +534,12 @@
           "dataType": "UINT8_T",
           "dataCount": 1,
           "comments": "[ScoopAxis, SensorAxis, Proboscis] (1-calibrate, 0-no action) (bitmasked)"
+        },
+        "RequestHumidity": {
+          "dataId": 9012,
+          "dataType": "UINT8_T",
+          "dataCount": 1,
+          "comments": "Request the humidity of the instrument"
         }
       },
       "Telemetry": {
@@ -766,6 +772,12 @@
           "dataType": "UINT32_T",
           "dataCount": 1,
           "comments": "Start a Reflectance reading, with the provided integration time (milliseconds)"
+        },
+        "RequestTemperature": {
+          "dataId": 16003,
+          "dataType": "UINT8_T",
+          "dataCount": 1,
+          "comments": "Request the temperature of the instrument"
         }
       },
       "Telemetry": {
