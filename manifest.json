@@ -819,7 +819,7 @@
         },
         "Temperature": {
           "dataId": 16106,
-          "dataType": "UINT8_T",
+          "dataType": "INT8_T",
           "dataCount": 1,
           "comments": "[Temperature] (degrees C)"
         }
