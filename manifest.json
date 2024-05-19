@@ -435,6 +435,12 @@
           "dataType": "UINT8_T",
           "dataCount": 1,
           "comments": "Toggle gripper and roll motors controlled by other packets; 0-Gripper1, 1-Gripper2"
+        },
+        "SoftLimitOverride": {
+          "dataId": 8013,
+          "dataType": "UINT8_T",
+          "dataCount": 1,
+          "comments": "[X+, X-, Y1+, Y1-, Y2+, Y2-, Z+, Z-, P+, P-] (0-override off, 1-override on) (bitmasked)"
         }
       },
       "Telemetry": {
