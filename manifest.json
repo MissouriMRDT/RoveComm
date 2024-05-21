@@ -546,6 +546,12 @@
           "dataType": "UINT8_T",
           "dataCount": 1,
           "comments": "Request the humidity of the instrument"
+        },
+        "AugerGimbalIncrement": {
+          "dataId": 9013,
+          "dataType": "INT16_T",
+          "dataCount": 2,
+          "comments": "[Pan, Tilt](degrees -180-180)"
         }
       },
       "Telemetry": {
