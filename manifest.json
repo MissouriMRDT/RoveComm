@@ -707,6 +707,18 @@
           "dataType": "UINT8_T",
           "dataCount": 2,
           "comments": "Take a picture with the current camera. [0] is the camera to take a picture with. [1] tells the camera whether to restart the stream afterwards."
+        },
+        "StopStream": {
+          "dataId": 12002,
+          "dataType": "UINT8_T",
+          "dataCount": 1,
+          "comments": "Stop the current camera stream. [0] is the camera to stop streaming."
+        },
+        "RestartStream": {
+          "dataId": 12003,
+          "dataType": "UINT8_T",
+          "dataCount": 1,
+          "comments": "Restart the current camera stream. [0] is the camera to restart streaming."
         }
       },
       "Telemetry": {
@@ -746,6 +758,18 @@
           "dataType": "UINT8_T",
           "dataCount": 1,
           "comments": "Take a picture with the current camera. [0] is the camera to take a picture with. [1] tells the camera whether to restart the stream afterwards."
+        },
+        "StopStream": {
+          "dataId": 13002,
+          "dataType": "UINT8_T",
+          "dataCount": 1,
+          "comments": "Stop the current camera stream. [0] is the camera to stop streaming."
+        },
+        "RestartStream": {
+          "dataId": 13003,
+          "dataType": "UINT8_T",
+          "dataCount": 1,
+          "comments": "Restart the current camera stream. [0] is the camera to restart streaming."
         }
       },
       "Telemetry": {
