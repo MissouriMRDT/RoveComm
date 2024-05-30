@@ -887,47 +887,8 @@
         "Rover2_4GHzRocket": {
             "Ip": "10.0.0.11"
         },
-        "Auger": {
-          "dataId": 9007,
-          "dataType": "INT16_T",
-          "dataCount": 1,
-          "comments": "Motor decipercent [-1000, 1000]"
-        },
-        "Microscope": {
-          "dataId": 9008,
-          "dataType": "UINT8_T",
-          "dataCount": 1,
-          "comments": "[0-180] (degrees)"
-        },
-        "WatchdogOverride": {
-          "dataId": 9010,
-          "dataType": "UINT8_T",
-          "dataCount": 1,
-          "comments": "[0-override off, 1-override on]"
-        },
-        "CalibrateEncoder": {
-          "dataId": 9011,
-          "dataType": "UINT8_T",
-          "dataCount": 1,
-          "comments": "[ScoopAxis, SensorAxis, Proboscis] (1-calibrate, 0-no action) (bitmasked)"
-        },
-        "RequestHumidity": {
-          "dataId": 9012,
-          "dataType": "UINT8_T",
-          "dataCount": 1,
-          "comments": "Request the humidity of the instrument"
-        },
-        "AugerGimbalIncrement": {
-          "dataId": 9013,
-          "dataType": "INT16_T",
-          "dataCount": 2,
-          "comments": "[Pan, Tilt](degrees -180-180)"
-        },
-        "EnableCooler": {
-          "dataId": 9014,
-          "dataType": "UINT8_T",
-          "dataCount": 1,
-          "comments": "[0-Disable, 1-Enable]"
+        "Basestation2_4GHzRocket": {
+            "Ip": "10.0.0.12"
         }
     }
 }
