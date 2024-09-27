@@ -2,7 +2,7 @@ name: generate md
 
 on:
   push:
-    paths: "manifest.json"
+    paths: "."
   
 
 jobs:
