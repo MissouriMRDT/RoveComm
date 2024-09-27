@@ -1,10 +1,7 @@
 name: generate md
 
-on:
-  push:
-    paths: "."
+on: [push]
   
-
 jobs:
   generatemd:
     runs-on: ubuntu-latest
