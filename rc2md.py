@@ -5,7 +5,7 @@ import json
 # source file
 json_path = "manifest.json"
 # destination file
-file_path = "docs.md"
+file_path = "README.md"
 
 def main():
     with open(json_path, "r") as file:
