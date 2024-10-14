@@ -1,9 +1,6 @@
 name: Generate README from Manifest
 
-on:
-  # Triggered by a webhook or any other event you prefer
-  repository_dispatch:
-    types: [generate_readme]
+on: push
 
 permissions:
   contents: write
@@ -21,7 +18,7 @@ jobs:
       - name: Set up Python environment
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Run README generation script
         run: |
