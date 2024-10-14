@@ -1,0 +1,44 @@
+name: Generate README from Manifest
+
+on:
+  # Triggered by a webhook or any other event you prefer
+  repository_dispatch:
+    types: [generate_readme]
+
+permissions:
+  contents: write
+
+jobs:
+  generate_readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run README generation script
+        run: |
+          python .github/scripts/readme-generate.py --json ./manifest.json --output ./README.md
+
+      - name: Set up Git config
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push changes directly to master
+        run: |
+          # Add and commit README.md if there are changes
+          git add README.md
+          if git diff-index --quiet HEAD; then
+            echo "No changes to commit"
+          else
+            git commit -m "[Automated] Human Readable Manifest Update"
+            git push origin master
+          fi
