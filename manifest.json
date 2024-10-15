@@ -609,7 +609,7 @@
             }
         },
         "Autonomy": {
-            "Ip": "192.168.3.104",
+            "Ip": "192.168.3.100",
             "Commands": {
                 "StartAutonomy": {
                     "dataId": 11000,
